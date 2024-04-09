@@ -25,3 +25,25 @@
 #container a {
   text-decoration: none;
 }
+
+ion-segment-button {
+  --indicator-color: #0834a3;
+}
+
+/* Material Design styles */
+ion-segment-button.md {
+  --color: #fff;
+  --color-checked: #0834a3;
+  --indicator-height: 5px;
+}
+// ion-segment-button.ios {
+//   --color: #fff;
+//   --color-checked: #0834a3;
+//   --indicator-height: 5px;
+// }
+/* iOS styles */
+ion-segment-button.ios {
+  --color: #fff;
+  --color-checked: #fff;
+  --border-radius: 20px;
+}

@@ -1,20 +1,123 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+      <img
+        slot="end"
+        src="assets/panda/download.png"
+        style="height: 3rem; padding: 0.1rem 0.2rem"
+      />
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div>
+    <ion-segment value="custom" role="tablist" class="md segment-scrollable">
+      <ion-segment-button value="custom">
+        <ion-label>Custom</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="segment">
+        <ion-label>Segment</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="buttons" routerLink="/second-page">
+        <ion-label>Page2</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </div>
-</ion-content>
+  <br />
+  <br />
+
+  <ion-content>
+    <swiper-container
+      dir="rtl"
+      free-mode="true"
+      space-between="10"
+      watch-slides-progress="true"
+      slides-per-view="2"
+    >
+      <swiper-slide style="text-align: center" routerLink="/second-page">
+        <img
+          src="assets/panda/download.jpg"
+          style="max-width: 90%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda</ion-button></ion-card-title
+          >
+        </ion-card-header>
+      </swiper-slide>
+      <swiper-slide style="text-align: center"  routerLink="/second-page">
+        <img
+          src="assets/panda/download1.jpg"
+          style="max-width: 100%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda1</ion-button></ion-card-title>
+        </ion-card-header>
+      </swiper-slide>
+      <swiper-slide style="text-align: center"  routerLink="/second-page">
+        <img
+          src="assets/panda/download2.jpg"
+          style="max-width: 100%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda2</ion-button></ion-card-title>
+        </ion-card-header>
+      </swiper-slide>
+      <swiper-slide style="text-align: center"  routerLink="/second-page">
+        <img
+          src="assets/panda/images.jpg"
+          style="max-width: 100%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda3</ion-button></ion-card-title>
+        </ion-card-header>
+      </swiper-slide>
+      <swiper-slide style="text-align: center"  routerLink="/second-page">
+        <img
+          src="assets/panda/images1.jpg"
+          style="max-width: 100%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda4</ion-button></ion-card-title>
+        </ion-card-header>
+      </swiper-slide>
+      <swiper-slide style="text-align: center"  routerLink="/second-page">
+        <img
+          src="assets/panda/images2.jpg"
+          style="max-width: 100%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda5</ion-button></ion-card-title>
+        </ion-card-header>
+      </swiper-slide>
+      <swiper-slide style="text-align: center"  routerLink="/second-page">
+        <img
+          src="assets/panda/images3.jpg"
+          style="max-width: 100%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda6</ion-button></ion-card-title>
+        </ion-card-header>
+      </swiper-slide>
+      <swiper-slide style="text-align: center"  routerLink="/second-page">
+        <img
+          src="assets/panda/images5.jpg"
+          style="max-width: 100%; height: 15rem; padding: 0.1rem 0.2rem"
+        />
+        <ion-card-header>
+          <ion-card-title><ion-button [disabled]="false"  shape="round" fill="outline">Panda7</ion-button></ion-card-title>
+        </ion-card-header>
+      </swiper-slide>
+    </swiper-container>
+  </ion-content>
+</div>

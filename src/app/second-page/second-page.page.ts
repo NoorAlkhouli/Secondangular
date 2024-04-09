@@ -1,56 +1,68 @@
-import { SecondPagePage } from './../second-page/second-page.page';
-import { Component, viewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, NgModule, OnInit, viewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, NgModel } from '@angular/forms';
 import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
-  IonButton,
-  IonCardHeader,
-  IonCard,
-  IonCardTitle,
-  IonFooter,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonIcon,
+  IonApp,
   IonButtons,
   IonMenu,
+  IonBadge,
+  IonButton,
   IonMenuButton,
-  IonRouterOutlet,
-  IonNav,
+  IonCardHeader,
+  IonCardTitle,
+  IonCard,
+  IonNavLink,
+  IonBackButton,
+  IonItem,
 } from '@ionic/angular/standalone';
-import { AppComponent } from '../app.component';
+import { RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 
-  register();
+register();
+
+
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-second-page',
+  templateUrl: './second-page.page.html',
+  styleUrls: ['./second-page.page.scss'],
   standalone: true,
   imports: [
-    IonNav,
-    IonRouterOutlet,
-    IonButtons,
-    IonFooter,
-    IonCardTitle,
+    IonBackButton,
+    IonNavLink,
     IonCard,
+    IonCardTitle,
     IonCardHeader,
     IonButton,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
+    IonBadge,
+    IonButtons,
+    IonApp,
+    IonIcon,
     IonContent,
-    RouterLink,
-    SecondPagePage,
-    AppComponent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
     IonMenu,
+    RouterLink,
     IonMenuButton,
+    IonItem,
+    CommonModule,
+    HttpClientModule,
   ],
-
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HomePage {
+export class SecondPagePage implements OnInit {
   constructor() {}
+
+  ngOnInit() {}
   content = viewChild(IonContent);
   component = SecondPagePage;
 

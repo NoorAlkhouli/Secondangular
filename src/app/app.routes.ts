@@ -10,4 +10,10 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+
+  {
+    path: 'second-page',
+    loadComponent: () => import('./second-page/second-page.page').then( m => m.SecondPagePage)
+  },
+  
 ];
